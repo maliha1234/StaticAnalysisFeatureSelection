@@ -7,3 +7,12 @@ python csvGenerationConfigToNumeric.py CSV_FILE_DIRECTORY PROGRAM_NAME
 #Then 
 
 python csvGenerationConfigFeatureCombination.py CSV_FILE_DIRECTORY PROGRAM_NAME
+
+For statistical table generation run the following code on Matlab
+
+ gradiant_decent.m
+
+
+For statistical graph generation run the R script
+
+>Rscript graphGeneration.R foldername programname featurenumber axisabel  
