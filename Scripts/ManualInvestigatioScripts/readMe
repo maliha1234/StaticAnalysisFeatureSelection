@@ -1,0 +1,9 @@
+
+# First run this to filter the slower optioned rows
+python csvGenerationConfigFilter.py CSV_FILE_DIRECTORY PROGRAM_NAME
+
+#Then find 10 most timed rows and out of that find those columns which has atleast half rows>= median
+python csvGenerationFindMedian.py CSV_FILE_DIRECTORY PROGRAM_NAME
+
+#next for each exceptional feature run 2nd level filter
+python csvGeneration2ndLevel.py CSV_FILE_DIRECTORY PROGRAM_NAME FEATURE_NAME
