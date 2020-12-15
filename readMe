@@ -3,6 +3,9 @@ CSV files Link :
 
 https://utdallas.box.com/s/vw5qa9b46adagfl4em9l5vdyuow9vvcl
 
+
+
+
 Manual Investigation : 
 # First run this to filter the slower optioned rows
 python csvGenerationConfigFilter.py CSV_FILE_DIRECTORY PROGRAM_NAME
@@ -12,3 +15,26 @@ python csvGenerationFindMedian.py CSV_FILE_DIRECTORY PROGRAM_NAME
 
 #next for each exceptional feature run 2nd level filter
 python csvGeneration2ndLevel.py CSV_FILE_DIRECTORY PROGRAM_NAME FEATURE_NAME
+
+
+
+
+Statistical Analysis :
+
+1. Run the Configuration to Numeric mapping script
+
+
+python csvGenerationConfigToNumeric.py CSV_FILE_DIRECTORY PROGRAM_NAME
+
+2. Generate a combination of Program Characteristics and Design Choice 
+
+python csvGenerationConfigFeatureCombination.py CSV_FILE_DIRECTORY PROGRAM_NAME
+
+For statistical table generation run the following code on Matlab
+
+ gradiant_decent.m
+
+
+For statistical graph generation run the R script
+
+>Rscript graphGeneration.R foldername programname featurenumber axisabel 
