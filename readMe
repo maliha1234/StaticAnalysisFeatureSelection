@@ -1,40 +1,59 @@
-CSV files Link :
-#For the CSV files go to the below link and download the porgrams 
-
-https://utdallas.box.com/s/vw5qa9b46adagfl4em9l5vdyuow9vvcl
-
+# Program Characteristics Selection
+## Data Files  :
+For the CSV files go to the [link](https://utdallas.box.com/s/vw5qa9b46adagfl4em9l5vdyuow9vvcl) and download the programs 
 
 
+##
 
-Manual Investigation : 
-# First run this to filter the slower optioned rows
+
+
+## Manual Investigation
+
+1. Run below script to filter the slower optioned rows
+```python 
 python csvGenerationConfigFilter.py CSV_FILE_DIRECTORY PROGRAM_NAME
+```
 
-#Then find 10 most timed rows and out of that find those columns which has atleast half rows>= median
+
+
+2. Find 10 most timed rows and out of that find those columns which has atleast half rows>= median
+
+```python 
 python csvGenerationFindMedian.py CSV_FILE_DIRECTORY PROGRAM_NAME
+```
+3. For each exceptional feature run 2nd level filter
+```python 
+python csvGeneration2ndLevel.py CSV_FILE_DIRECTORY PROGRAM_NAME FEATURE_NAME 
+```
 
-#next for each exceptional feature run 2nd level filter
-python csvGeneration2ndLevel.py CSV_FILE_DIRECTORY PROGRAM_NAME FEATURE_NAME
-
-
-
-
-Statistical Analysis :
-
-1. Run the Configuration to Numeric mapping script
+##
 
 
+## Statistical Analysis
+
+
+1. Run the script to map Configuration to Numeric value
+
+```python 
 python csvGenerationConfigToNumeric.py CSV_FILE_DIRECTORY PROGRAM_NAME
+```
 
 2. Generate a combination of Program Characteristics and Design Choice 
 
+```python 
 python csvGenerationConfigFeatureCombination.py CSV_FILE_DIRECTORY PROGRAM_NAME
+```
 
-For statistical table generation run the following code on Matlab
 
+
+For the statistical table, generation run the following code on [Matlab](https://www.mathworks.com/products/matlab.html)
+```python 
  gradiant_decent.m
+```
 
 
-For statistical graph generation run the R script
+For statistical graph generation run the [R](https://www.r-project.org/) script
 
->Rscript graphGeneration.R foldername programname featurenumber axisabel 
+```python
+>Rscript graphGeneration.R foldername programname featurenumber axisabel
+```
