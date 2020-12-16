@@ -1,6 +1,6 @@
 # Program Characteristics Selection
 ## Data Files  :
-For the CSV files go to the [link](https://utdallas.box.com/s/vw5qa9b46adagfl4em9l5vdyuow9vvcl) and download the programs 
+For the CSV files go to the [link](https://utdallas.box.com/s/vw5qa9b46adagfl4em9l5vdyuow9vvcl) and download the program Files
 
 
 ##
