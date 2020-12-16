@@ -48,7 +48,7 @@ python csvGenerationConfigFeatureCombination.py CSV_FILE_DIRECTORY PROGRAM_NAME
 
 For the statistical table, generation run the following code on [Matlab](https://www.mathworks.com/products/matlab.html)
 ```python 
- gradiant_decent.m
+ nohup matlab -nodisplay -nosplash < gradiant_decent.m > output.txt 2> error.txt & 
 ```
 
 
